@@ -13,33 +13,34 @@ function NewBeer() {
 
     const handleSubmit = (event) => {
 
-          event.preventDefault();
+        event.preventDefault();
 
-          const newBeer = {
-              "name": name,
-              "tagline": tagline,
-              "description": description,
-              "first_brewed": first_brewed,
-              "brewers_tips": brewers_tips,
-              "attenuation_level": attenuation_level,
-              "contributed_by": contributed_by
-          }
+        const newBeer = {
+            "name": name,
+            "tagline": tagline,
+            "description": description,
+            "first_brewed": first_brewed,
+            "brewers_tips": brewers_tips,
+            "attenuation_level": attenuation_level,
+            "contributed_by": contributed_by
+        }
 
-          axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
-              .then((res) => {
-                  console.log(res.data);
-              })
-              .catch((err) => {
-                  console.log("Error creating beer to API", err);
-              })
+        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
+                .then((res) => {
+                    console.log(res.data);
+                    
+                })
+                .catch((err) => {
+                    console.log("Error creating beer to API", err);
+                })
 
-          setName("");
-          setTagline("");
-          setDescription("");
-          setFirst_brewed("");
-          setBrewers_tips("");
-          setAttenuation_level(5);
-          setContributed_by("")
+            setName("");
+            setTagline("");
+            setDescription("");
+            setFirst_brewed("");
+            setBrewers_tips("");
+            setAttenuation_level(5);
+            setContributed_by("")
 
     }
 

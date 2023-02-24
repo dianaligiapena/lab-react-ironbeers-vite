@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
 
 function AllBeers( { beers } ) {
-    
-
   return (
-
     <>
         <NavBar />
         <h3>All Beers List</h3>
@@ -23,9 +20,6 @@ function AllBeers( { beers } ) {
                 </div>
             )
         } ) }
-
-
-    
     </>
   )
 }

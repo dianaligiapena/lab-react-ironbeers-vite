@@ -19,6 +19,10 @@ function RandomBeer() {
     console.log(randomBeer);
   }, [randomBeer] );
 
+  if ( !randomBeer ) {
+    return <p>Loading...</p>
+  }
+
   return (
     <>
       <NavBar />
