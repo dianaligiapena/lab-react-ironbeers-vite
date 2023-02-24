@@ -1,8 +1,14 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 function AllBeers() {
   return (
-    <div>AllBeers</div>
+
+    <>
+        <NavBar />
+        <h3>All Beers</h3>
+    
+    </>
   )
 }
 
