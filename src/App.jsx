@@ -6,6 +6,7 @@ import AllBeers from './components/AllBeers'
 import SingleBeer from './components/SingleBeer'
 import axios from 'axios'
 import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/beers" element={<AllBeers beers = { beers } />} />
         <Route path='/beers/:id' element={<SingleBeer beers = { beers } />} />
         <Route path='/random-beer' element={<RandomBeer />} />
+        <Route path='/new-beer' element={<NewBeer />} />
       </Routes>
     </div>
   )
