@@ -1,11 +1,25 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
 
-function AllBeers( { beers } ) {
+function AllBeers( { beers, setBeers } ) {
+
+  const handleSearch = async (event) => {
+    const value = event.target.value.toLowerCase();
+
+    const response = await fetch( `https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`);
+    const data = await response.json();
+
+    setBeers( data );
+  };
+
   return (
     <>
         <NavBar />
+        <label> Search the beers 🍻 down below: </label>
+        <input 
+            onChange = { (e) => handleSearch(e) }
+          />
+
         <h3>All Beers List</h3>
 
         { beers.map( (beer) => {
